@@ -1,0 +1,33 @@
+C:\Users\r.klauss\Documents\Visual Studio 2015\Projects\DatagridDynamicColumns\Bin\Debug\ViewModel.dll
+C:\Users\r.klauss\Documents\Visual Studio 2015\Projects\DatagridDynamicColumns\Bin\Debug\ViewModel.pdb
+C:\Users\r.klauss\Documents\Visual Studio 2015\Projects\DatagridDynamicColumns\ViewModel\obj\Debug\ViewModel.csprojResolveAssemblyReference.cache
+C:\Users\r.klauss\Documents\Visual Studio 2015\Projects\DatagridDynamicColumns\ViewModel\obj\Debug\ViewModel.dll
+C:\Users\r.klauss\Documents\Visual Studio 2015\Projects\DatagridDynamicColumns\ViewModel\obj\Debug\ViewModel.pdb
+C:\Users\r.klauss\Documents\Visual Studio 2015\Projects\Kundenverwaltung\ViewModel\obj\Debug\ViewModel.csprojResolveAssemblyReference.cache
+C:\Users\r.klauss\Documents\Visual Studio 2015\Projects\Kundenverwaltung\Bin\Debug\ViewModel.dll
+C:\Users\r.klauss\Documents\Visual Studio 2015\Projects\Kundenverwaltung\Bin\Debug\ViewModel.pdb
+C:\Users\r.klauss\Documents\Visual Studio 2015\Projects\Kundenverwaltung\ViewModel\obj\Debug\ViewModel.dll
+C:\Users\r.klauss\Documents\Visual Studio 2015\Projects\Kundenverwaltung\ViewModel\obj\Debug\ViewModel.pdb
+C:\Users\r.klauss\Documents\Visual Studio 2015\Projects\KundenverwaltungAAE\Bin\Debug\ViewModel.dll
+C:\Users\r.klauss\Documents\Visual Studio 2015\Projects\KundenverwaltungAAE\Bin\Debug\ViewModel.pdb
+C:\Users\r.klauss\Documents\Visual Studio 2015\Projects\KundenverwaltungAAE\ViewModel\obj\Debug\ViewModel.csprojResolveAssemblyReference.cache
+C:\Users\r.klauss\Documents\Visual Studio 2015\Projects\KundenverwaltungAAE\ViewModel\obj\Debug\ViewModel.dll
+C:\Users\r.klauss\Documents\Visual Studio 2015\Projects\KundenverwaltungAAE\ViewModel\obj\Debug\ViewModel.pdb
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung-master\master\Bin\Debug\ViewModel.dll
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung-master\master\Bin\Debug\ViewModel.pdb
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung-master\master\ViewModel\obj\Debug\ViewModel.csprojResolveAssemblyReference.cache
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung-master\master\ViewModel\obj\Debug\ViewModel.csproj.CoreCompileInputs.cache
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung-master\master\ViewModel\obj\Debug\ViewModel.dll
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung-master\master\ViewModel\obj\Debug\ViewModel.pdb
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung Metro UI\ViewModel\obj\Debug\ViewModel.csprojResolveAssemblyReference.cache
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung Metro UI\ViewModel\obj\Debug\ViewModel.csproj.CoreCompileInputs.cache
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung Metro UI\Bin\Debug\ViewModel.dll
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung Metro UI\Bin\Debug\ViewModel.pdb
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung Metro UI\ViewModel\obj\Debug\ViewModel.dll
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung Metro UI\ViewModel\obj\Debug\ViewModel.pdb
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung\Bin\Debug\ViewModel.dll
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung\Bin\Debug\ViewModel.pdb
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung\ViewModel\obj\Debug\ViewModel.csprojResolveAssemblyReference.cache
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung\ViewModel\obj\Debug\ViewModel.csproj.CoreCompileInputs.cache
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung\ViewModel\obj\Debug\ViewModel.dll
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung\ViewModel\obj\Debug\ViewModel.pdb

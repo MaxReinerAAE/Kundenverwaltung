@@ -1,0 +1,90 @@
+C:\Users\r.klauss\Documents\Visual Studio 2015\Projects\KundenverwaltungAAE\Bin\Debug\CustomerApplication.exe.config
+C:\Users\r.klauss\Documents\Visual Studio 2015\Projects\KundenverwaltungAAE\Bin\Debug\CustomerApplication.exe
+C:\Users\r.klauss\Documents\Visual Studio 2015\Projects\KundenverwaltungAAE\Bin\Debug\CustomerApplication.pdb
+C:\Users\r.klauss\Documents\Visual Studio 2015\Projects\KundenverwaltungAAE\CustomerApplication\obj\Debug\CustomerApplication.csprojResolveAssemblyReference.cache
+C:\Users\r.klauss\Documents\Visual Studio 2015\Projects\KundenverwaltungAAE\CustomerApplication\obj\Debug\DataGridStyle.baml
+C:\Users\r.klauss\Documents\Visual Studio 2015\Projects\KundenverwaltungAAE\CustomerApplication\obj\Debug\DataGridView.baml
+C:\Users\r.klauss\Documents\Visual Studio 2015\Projects\KundenverwaltungAAE\CustomerApplication\obj\Debug\ScrollViewerStyle.baml
+C:\Users\r.klauss\Documents\Visual Studio 2015\Projects\KundenverwaltungAAE\CustomerApplication\obj\Debug\App.baml
+C:\Users\r.klauss\Documents\Visual Studio 2015\Projects\KundenverwaltungAAE\CustomerApplication\obj\Debug\DataGridView.g.cs
+C:\Users\r.klauss\Documents\Visual Studio 2015\Projects\KundenverwaltungAAE\CustomerApplication\obj\Debug\MainWindow.g.cs
+C:\Users\r.klauss\Documents\Visual Studio 2015\Projects\KundenverwaltungAAE\CustomerApplication\obj\Debug\App.g.cs
+C:\Users\r.klauss\Documents\Visual Studio 2015\Projects\KundenverwaltungAAE\CustomerApplication\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\r.klauss\Documents\Visual Studio 2015\Projects\KundenverwaltungAAE\CustomerApplication\obj\Debug\CustomerApplication_MarkupCompile.cache
+C:\Users\r.klauss\Documents\Visual Studio 2015\Projects\KundenverwaltungAAE\CustomerApplication\obj\Debug\CustomerApplication_MarkupCompile.lref
+C:\Users\r.klauss\Documents\Visual Studio 2015\Projects\KundenverwaltungAAE\CustomerApplication\obj\Debug\MainWindow.baml
+C:\Users\r.klauss\Documents\Visual Studio 2015\Projects\KundenverwaltungAAE\CustomerApplication\obj\Debug\Styles.baml
+C:\Users\r.klauss\Documents\Visual Studio 2015\Projects\KundenverwaltungAAE\CustomerApplication\obj\Debug\CustomerApplication.g.resources
+C:\Users\r.klauss\Documents\Visual Studio 2015\Projects\KundenverwaltungAAE\CustomerApplication\obj\Debug\CustomerApplication.Properties.Resources.resources
+C:\Users\r.klauss\Documents\Visual Studio 2015\Projects\KundenverwaltungAAE\CustomerApplication\obj\Debug\CustomerApplication.csproj.GenerateResource.Cache
+C:\Users\r.klauss\Documents\Visual Studio 2015\Projects\KundenverwaltungAAE\CustomerApplication\obj\Debug\CustomerApplication.exe
+C:\Users\r.klauss\Documents\Visual Studio 2015\Projects\KundenverwaltungAAE\CustomerApplication\obj\Debug\CustomerApplication.pdb
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung-master\master\Bin\Debug\CustomerApplication.exe.config
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung-master\master\Bin\Debug\CustomerApplication.exe
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung-master\master\Bin\Debug\CustomerApplication.pdb
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung-master\master\CustomerApplication\obj\Debug\CustomerApplication.csprojResolveAssemblyReference.cache
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung-master\master\CustomerApplication\obj\Debug\DataGridStyle.baml
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung-master\master\CustomerApplication\obj\Debug\ScrollViewerStyle.baml
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung-master\master\CustomerApplication\obj\Debug\App.baml
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung-master\master\CustomerApplication\obj\Debug\CustomComboBox.g.cs
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung-master\master\CustomerApplication\obj\Debug\CustomerDetailWindow.g.cs
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung-master\master\CustomerApplication\obj\Debug\DataGridView.g.cs
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung-master\master\CustomerApplication\obj\Debug\MainWindow.g.cs
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung-master\master\CustomerApplication\obj\Debug\App.g.cs
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung-master\master\CustomerApplication\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung-master\master\CustomerApplication\obj\Debug\CustomerApplication_MarkupCompile.cache
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung-master\master\CustomerApplication\obj\Debug\CustomerApplication_MarkupCompile.lref
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung-master\master\CustomerApplication\obj\Debug\CustomComboBox.baml
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung-master\master\CustomerApplication\obj\Debug\CustomerDetailWindow.baml
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung-master\master\CustomerApplication\obj\Debug\DataGridView.baml
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung-master\master\CustomerApplication\obj\Debug\MainWindow.baml
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung-master\master\CustomerApplication\obj\Debug\CustomerApplication.g.resources
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung-master\master\CustomerApplication\obj\Debug\CustomerApplication.Properties.Resources.resources
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung-master\master\CustomerApplication\obj\Debug\CustomerApplication.csproj.GenerateResource.Cache
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung-master\master\CustomerApplication\obj\Debug\CustomerApplication.csproj.CoreCompileInputs.cache
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung-master\master\CustomerApplication\obj\Debug\CustomerApplication.exe
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung-master\master\CustomerApplication\obj\Debug\CustomerApplication.pdb
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung Metro UI\CustomerApplication\obj\Debug\CustomerApplication.csprojResolveAssemblyReference.cache
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung Metro UI\CustomerApplication\obj\Debug\CustomComboBox.g.cs
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung Metro UI\CustomerApplication\obj\Debug\MainWindow.g.cs
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung Metro UI\CustomerApplication\obj\Debug\App.g.cs
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung Metro UI\CustomerApplication\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung Metro UI\CustomerApplication\obj\Debug\CustomerApplication_MarkupCompile.cache
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung Metro UI\CustomerApplication\obj\Debug\CustomerApplication_MarkupCompile.lref
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung Metro UI\Bin\Debug\CustomerApplication.exe.config
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung Metro UI\Bin\Debug\CustomerApplication.exe
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung Metro UI\Bin\Debug\CustomerApplication.pdb
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung Metro UI\CustomerApplication\obj\Debug\CustomerDetailWindow.g.cs
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung Metro UI\CustomerApplication\obj\Debug\DataGridView.g.cs
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung Metro UI\CustomerApplication\obj\Debug\CustomComboBox.baml
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung Metro UI\CustomerApplication\obj\Debug\CustomerDetailWindow.baml
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung Metro UI\CustomerApplication\obj\Debug\DataGridView.baml
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung Metro UI\CustomerApplication\obj\Debug\MainWindow.baml
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung Metro UI\CustomerApplication\obj\Debug\CustomerApplication.g.resources
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung Metro UI\CustomerApplication\obj\Debug\CustomerApplication.Properties.Resources.resources
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung Metro UI\CustomerApplication\obj\Debug\CustomerApplication.csproj.GenerateResource.Cache
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung Metro UI\CustomerApplication\obj\Debug\CustomerApplication.csproj.CoreCompileInputs.cache
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung Metro UI\CustomerApplication\obj\Debug\CustomerApplication.exe
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung Metro UI\CustomerApplication\obj\Debug\CustomerApplication.pdb
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung\Bin\Debug\CustomerApplication.exe.config
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung\Bin\Debug\CustomerApplication.exe
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung\Bin\Debug\CustomerApplication.pdb
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung\CustomerApplication\obj\Debug\CustomerApplication.csprojResolveAssemblyReference.cache
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung\CustomerApplication\obj\Debug\CustomComboBox.g.cs
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung\CustomerApplication\obj\Debug\CustomerDetailWindow.g.cs
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung\CustomerApplication\obj\Debug\DataGridView.g.cs
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung\CustomerApplication\obj\Debug\MainWindow.g.cs
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung\CustomerApplication\obj\Debug\App.g.cs
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung\CustomerApplication\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung\CustomerApplication\obj\Debug\CustomerApplication_MarkupCompile.cache
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung\CustomerApplication\obj\Debug\CustomerApplication_MarkupCompile.lref
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung\CustomerApplication\obj\Debug\CustomComboBox.baml
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung\CustomerApplication\obj\Debug\CustomerDetailWindow.baml
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung\CustomerApplication\obj\Debug\DataGridView.baml
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung\CustomerApplication\obj\Debug\MainWindow.baml
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung\CustomerApplication\obj\Debug\CustomerApplication.g.resources
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung\CustomerApplication\obj\Debug\CustomerApplication.Properties.Resources.resources
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung\CustomerApplication\obj\Debug\CustomerApplication.csproj.GenerateResource.Cache
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung\CustomerApplication\obj\Debug\CustomerApplication.csproj.CoreCompileInputs.cache
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung\CustomerApplication\obj\Debug\CustomerApplication.exe
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung\CustomerApplication\obj\Debug\CustomerApplication.pdb
