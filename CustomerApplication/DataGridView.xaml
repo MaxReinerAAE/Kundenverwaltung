@@ -8,14 +8,15 @@
              xmlns:local="clr-namespace:CustomerApplication"
              xmlns:datamodel="clr-namespace:DataModel;assembly=DataModel"
              xmlns:filter="clr-namespace:DataGridFilterLibrary;assembly=DataGridFilterLibrary"
-             xmlns:Converters="clr-namespace:CustomerApplication" >
+             xmlns:Converters="clr-namespace:CustomerApplication"
+             xmlns:Dialog="clr-namespace:MahApps.Metro.Controls.Dialogs;assembly=MahApps.Metro"
+             xmlns:Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero"
+             Dialog:DialogParticipation.Register="{Binding}">
     <UserControl.DataContext>
         <this:DataGridViewModel />
     </UserControl.DataContext>
-
-   
     <DockPanel>
-        
+
         <DockPanel.Resources>
             <BooleanToVisibilityConverter x:Key="BooleanToVisibility"/>
             <local:OppositeBooleanToVisibility x:Key="oppositeBooleanToVisibility"/>
@@ -42,10 +43,10 @@
                 </CheckBox>
             </StackPanel>
             <Separator/>
-           
+
         </ToolBar>
         <Grid>
-        <DataGrid Name="CustomerGrid"  ItemsSource="{Binding Path=CustomersInfo}"  
+            <DataGrid Name="CustomerGrid"  ItemsSource="{Binding Path=CustomersInfo}" 
                        
                        filter:DataGridExtensions.UseBackgroundWorkerForFiltering="True"
                         
@@ -63,7 +64,7 @@
 		          MinRowHeight="26" CanUserAddRows="False"
                   HorizontalAlignment="Left" 
 		          VerticalAlignment="Top"
-		          AlternationCount="2">
+		          AlternationCount="2" >
 
                 <DataGrid.Resources>
                     <local:KundeÜberfälligConverter x:Key="KundeÜberfälligConverter" />
@@ -72,40 +73,326 @@
                         <Converters:EnumItem Value="In_Arbeit" DisplayValue="Orange" Text="In Arbeit"  />
                         <Converters:EnumItem Value="Erledigt" DisplayValue="Green" Text="Erledigt" />
                     </Converters:EnumItemList>
+
+
+
                 </DataGrid.Resources>
+
+
+
                 <DataGrid.Columns>
-                <DataGridTextColumn Width="Auto"  Header="ID" Binding="{Binding Path=ID,UpdateSourceTrigger=PropertyChanged}"/>
-                <DataGridTextColumn Width="Auto" Header="Kundenbezeichnung" Binding="{Binding Path=Kundenbezeichnung,UpdateSourceTrigger=PropertyChanged}"/>
-                <DataGridTextColumn Width="Auto" Header="Ort" Binding="{Binding Path=Ort,UpdateSourceTrigger=PropertyChanged}"/>
-                <DataGridTextColumn Width="Auto"  Header="Bundesland" Binding="{Binding Path=Bundesland,UpdateSourceTrigger=PropertyChanged}"/>
-                <DataGridTextColumn Width="Auto" Header="Adresse" Binding="{Binding Path=Adresse,UpdateSourceTrigger=PropertyChanged}"/>
-                <DataGridTextColumn Width="Auto" Header="Telefonnummer 1" Binding="{Binding Path=Telefonnummer_1,UpdateSourceTrigger=PropertyChanged}"/>
-                <!--<DataGridTextColumn Width="Auto" Header="Telefonnummer 2" Binding="{Binding Path=Telefonnummer2,UpdateSourceTrigger=PropertyChanged}"/>-->
-                <DataGridTextColumn Width="Auto" Header="E-Mail" Binding="{Binding Path=Email,UpdateSourceTrigger=PropertyChanged}"/>
-                <DataGridTextColumn Width="Auto" Header="Ansprechperson Titel" Binding="{Binding Path=AnsprechpersonTitle,UpdateSourceTrigger=PropertyChanged}"/>
-                <DataGridTextColumn Width="Auto" Header="Vorname" Binding="{Binding Path=AnsprechpersonVorname,UpdateSourceTrigger=PropertyChanged}"/>
-                <DataGridTextColumn Width="Auto" Header="Nachname" Binding="{Binding Path=AnsprechpersonNachname,UpdateSourceTrigger=PropertyChanged}"/>
-                <DataGridComboBoxColumn Header="Bearbeitungsstatus"                                                  
+                    <DataGridTextColumn ElementStyle="{DynamicResource MetroDataGridTextBox}" IsReadOnly="True"
+                                        EditingElementStyle="{DynamicResource MetroDataGridTextBox}" Width="Auto"  Header="ID" Binding="{Binding Path=ID,UpdateSourceTrigger=PropertyChanged}">
+                        <DataGridTextColumn.HeaderStyle>
+                            <Style TargetType="{x:Type DataGridColumnHeader}" 
+                                               BasedOn="{StaticResource {ComponentResourceKey TypeInTargetAssembly={x:Type filter:DataGridHeaderFilterControl}, ResourceId=DataGridHeaderFilterControlStyle}}">
+                                <Setter Property="FontSize" Value="14" />
+                                <Setter Property="FontFamily" Value="{DynamicResource DefaultFont}" />
+                                <Setter Property="FontWeight" Value="SemiBold" />
+                                <Setter Property="Background" Value="{StaticResource headerStyleGradient}" />
+                                <Setter Property="BorderBrush" Value="{DynamicResource BlackBrush}" />
+                                <Setter Property="Foreground" Value="Yellow" />
+
+                                <Setter Property="Margin" Value="1,1,1,1" />
+                                <Setter Property="Padding" Value="3,3,3,3" />
+                                <Setter Property="BorderThickness" Value="0,0,0,0" />
+                                <Setter Property="Cursor" Value="Hand" />
+
+                            </Style>
+                        </DataGridTextColumn.HeaderStyle>
+
+                    </DataGridTextColumn>
+                    <DataGridTextColumn ElementStyle="{DynamicResource MetroDataGridTextBox}"
+                                        EditingElementStyle="{DynamicResource MetroDataGridTextBox}" Width="Auto" Header="Kundenbezeichnung" Binding="{Binding Path=Kundenbezeichnung,UpdateSourceTrigger=PropertyChanged}">
+                        <DataGridTextColumn.HeaderStyle>
+                            <Style TargetType="{x:Type DataGridColumnHeader}" 
+                                               BasedOn="{StaticResource {ComponentResourceKey TypeInTargetAssembly={x:Type filter:DataGridHeaderFilterControl}, ResourceId=DataGridHeaderFilterControlStyle}}">
+                                <Setter Property="FontSize" Value="14" />
+                                <Setter Property="FontFamily" Value="{DynamicResource DefaultFont}" />
+                                <Setter Property="FontWeight" Value="SemiBold" />
+                                <Setter Property="Background" Value="{StaticResource headerStyleGradient}" />
+                                <Setter Property="BorderBrush" Value="{DynamicResource BlackBrush}" />
+                                <Setter Property="Foreground" Value="Yellow" />
+                                <Setter Property="Margin" Value="1,1,1,1" />
+                                <Setter Property="Padding" Value="3,3,3,3" />
+                                <Setter Property="BorderThickness" Value="0,0,0,0" />
+
+                                <Setter Property="Cursor" Value="Hand" />
+                            </Style>
+
+                        </DataGridTextColumn.HeaderStyle>
+
+                    </DataGridTextColumn>
+                    <DataGridTextColumn ElementStyle="{DynamicResource MetroDataGridTextBox}"
+                                        EditingElementStyle="{DynamicResource MetroDataGridTextBox}" Width="Auto" Header="Ort" Binding="{Binding Path=Ort,UpdateSourceTrigger=PropertyChanged}">
+                        <DataGridTextColumn.HeaderStyle>
+                            <Style TargetType="{x:Type DataGridColumnHeader}" 
+                                               BasedOn="{StaticResource {ComponentResourceKey TypeInTargetAssembly={x:Type filter:DataGridHeaderFilterControl}, ResourceId=DataGridHeaderFilterControlStyle}}">
+                                <Setter Property="FontSize" Value="14" />
+                                <Setter Property="FontFamily" Value="{DynamicResource DefaultFont}" />
+                                <Setter Property="FontWeight" Value="SemiBold" />
+                                <Setter Property="Background" Value="{StaticResource headerStyleGradient}" />
+                                <Setter Property="BorderBrush" Value="{DynamicResource BlackBrush}" />
+                                <Setter  Property="Foreground" Value="Yellow" />
+                                <Setter Property="Margin" Value="1,1,1,1" />
+                                <Setter Property="Padding" Value="3,3,3,3" />
+                                <Setter Property="BorderThickness" Value="0,0,0,0" />
+
+                                <Setter Property="Cursor" Value="Hand" />
+                            </Style>
+
+                        </DataGridTextColumn.HeaderStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn ElementStyle="{DynamicResource MetroDataGridTextBox}"
+                                        EditingElementStyle="{DynamicResource MetroDataGridTextBox}" Width="Auto"  Header="Bundesland" Binding="{Binding Path=Bundesland,UpdateSourceTrigger=PropertyChanged}">
+                        <DataGridTextColumn.HeaderStyle>
+                            <Style TargetType="{x:Type DataGridColumnHeader}" 
+                                               BasedOn="{StaticResource {ComponentResourceKey TypeInTargetAssembly={x:Type filter:DataGridHeaderFilterControl}, ResourceId=DataGridHeaderFilterControlStyle}}">
+                                <Setter Property="FontSize" Value="14" />
+                                <Setter Property="FontFamily" Value="{DynamicResource DefaultFont}" />
+                                <Setter Property="FontWeight" Value="SemiBold" />
+                                <Setter Property="Background" Value="{StaticResource headerStyleGradient}" />
+                                <Setter Property="BorderBrush" Value="{DynamicResource BlackBrush}" />
+                                <Setter Property="Foreground" Value="Yellow"/>
+                                <Setter Property="Margin" Value="1,1,1,1" />
+                                <Setter Property="Padding" Value="3,3,3,3" />
+                                <Setter Property="BorderThickness" Value="0,0,0,0" />
+
+                                <Setter Property="Cursor" Value="Hand" />
+                            </Style>
+
+                        </DataGridTextColumn.HeaderStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn ElementStyle="{DynamicResource MetroDataGridTextBox}"
+                                        EditingElementStyle="{DynamicResource MetroDataGridTextBox}" Width="Auto" Header="Adresse" Binding="{Binding Path=Adresse,UpdateSourceTrigger=PropertyChanged}">
+                        <DataGridTextColumn.HeaderStyle>
+                            <Style TargetType="{x:Type DataGridColumnHeader}" 
+                                               BasedOn="{StaticResource {ComponentResourceKey TypeInTargetAssembly={x:Type filter:DataGridHeaderFilterControl}, ResourceId=DataGridHeaderFilterControlStyle}}">
+                                <Setter Property="FontSize" Value="14" />
+                                <Setter Property="FontFamily" Value="{DynamicResource DefaultFont}" />
+                                <Setter Property="FontWeight" Value="SemiBold" />
+                                <Setter Property="Background" Value="{StaticResource headerStyleGradient}" />
+                                <Setter Property="BorderBrush" Value="{DynamicResource BlackBrush}" />
+                                <Setter  Property="Foreground" Value="Yellow" />
+                                <Setter Property="Margin" Value="1,1,1,1" />
+                                <Setter Property="Padding" Value="3,3,3,3" />
+                                <Setter Property="BorderThickness" Value="0,0,0,0" />
+
+                                <Setter Property="Cursor" Value="Hand" />
+                            </Style>
+
+                        </DataGridTextColumn.HeaderStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn ElementStyle="{DynamicResource MetroDataGridTextBox}"
+                                        EditingElementStyle="{DynamicResource MetroDataGridTextBox}" Width="Auto" Header="Telefonnummer 1" Binding="{Binding Path=Telefonnummer_1,UpdateSourceTrigger=PropertyChanged}">
+                        <DataGridTextColumn.HeaderStyle>
+                            <Style TargetType="{x:Type DataGridColumnHeader}" 
+                                               BasedOn="{StaticResource {ComponentResourceKey TypeInTargetAssembly={x:Type filter:DataGridHeaderFilterControl}, ResourceId=DataGridHeaderFilterControlStyle}}">
+                                <Setter Property="FontSize" Value="14" />
+                                <Setter Property="FontFamily" Value="{DynamicResource DefaultFont}" />
+                                <Setter Property="FontWeight" Value="SemiBold" />
+                                <Setter Property="Background" Value="{StaticResource headerStyleGradient}" />
+                                <Setter Property="BorderBrush" Value="{DynamicResource BlackBrush}" />
+                                <Setter  Property="Foreground" Value="Yellow"/>
+                                <Setter Property="Margin" Value="1,1,1,1" />
+                                <Setter Property="Padding" Value="3,3,3,3" />
+                                <Setter Property="BorderThickness" Value="0,0,0,0" />
+                                <Setter Property="Cursor" Value="Hand" />
+                            </Style>
+
+                        </DataGridTextColumn.HeaderStyle>
+                    </DataGridTextColumn>
+                    <!--<DataGridTextColumn Width="Auto" Header="Telefonnummer 2" Binding="{Binding Path=Telefonnummer2,UpdateSourceTrigger=PropertyChanged}"/>-->
+                    <DataGridTextColumn ElementStyle="{DynamicResource MetroDataGridTextBox}"
+                                        EditingElementStyle="{DynamicResource MetroDataGridTextBox}" Width="Auto" Header="E-Mail" Binding="{Binding Path=Email,UpdateSourceTrigger=PropertyChanged}">
+                        <DataGridTextColumn.HeaderStyle>
+                            <Style TargetType="{x:Type DataGridColumnHeader}" 
+                                               BasedOn="{StaticResource {ComponentResourceKey TypeInTargetAssembly={x:Type filter:DataGridHeaderFilterControl}, ResourceId=DataGridHeaderFilterControlStyle}}">
+                                <Setter Property="FontSize" Value="14" />
+                                <Setter Property="FontFamily" Value="{DynamicResource DefaultFont}" />
+                                <Setter Property="FontWeight" Value="SemiBold" />
+                                <Setter Property="Background" Value="{StaticResource headerStyleGradient}" />
+                                <Setter Property="BorderBrush" Value="{DynamicResource BlackBrush}" />
+                                <Setter  Property="Foreground" Value="Yellow" />
+                                <Setter Property="Margin" Value="1,1,1,1" />
+                                <Setter Property="Padding" Value="3,3,3,3" />
+                                <Setter Property="BorderThickness" Value="0,0,0,0" />
+
+                                <Setter Property="Cursor" Value="Hand" />
+                            </Style>
+
+                        </DataGridTextColumn.HeaderStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn ElementStyle="{DynamicResource MetroDataGridTextBox}"
+                                        EditingElementStyle="{DynamicResource MetroDataGridTextBox}" Width="Auto" Header="Ansprechperson Titel" Binding="{Binding Path=AnsprechpersonTitle,UpdateSourceTrigger=PropertyChanged}">
+                        <DataGridTextColumn.HeaderStyle>
+                            <Style TargetType="{x:Type DataGridColumnHeader}" 
+                                               BasedOn="{StaticResource {ComponentResourceKey TypeInTargetAssembly={x:Type filter:DataGridHeaderFilterControl}, ResourceId=DataGridHeaderFilterControlStyle}}">
+                                <Setter Property="FontSize" Value="14" />
+                                <Setter Property="FontFamily" Value="{DynamicResource DefaultFont}" />
+                                <Setter Property="FontWeight" Value="SemiBold" />
+                                <Setter Property="Background" Value="{StaticResource headerStyleGradient}" />
+                                <Setter Property="BorderBrush" Value="{DynamicResource BlackBrush}" />
+                                <Setter  Property="Foreground" Value="Yellow" />
+                                <Setter Property="Margin" Value="1,1,1,1" />
+                                <Setter Property="Padding" Value="3,3,3,3" />
+                                <Setter Property="BorderThickness" Value="0,0,0,0" />
+
+                                <Setter Property="Cursor" Value="Hand" />
+                            </Style>
+
+                        </DataGridTextColumn.HeaderStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn ElementStyle="{DynamicResource MetroDataGridTextBox}"
+                                        EditingElementStyle="{DynamicResource MetroDataGridTextBox}" Width="Auto" Header="Vorname" Binding="{Binding Path=AnsprechpersonVorname,UpdateSourceTrigger=PropertyChanged}">
+                        <DataGridTextColumn.HeaderStyle>
+                            <Style TargetType="{x:Type DataGridColumnHeader}" 
+                                               BasedOn="{StaticResource {ComponentResourceKey TypeInTargetAssembly={x:Type filter:DataGridHeaderFilterControl}, ResourceId=DataGridHeaderFilterControlStyle}}">
+                                <Setter Property="FontSize" Value="14" />
+                                <Setter Property="FontFamily" Value="{DynamicResource DefaultFont}" />
+                                <Setter Property="FontWeight" Value="SemiBold" />
+                                <Setter Property="Background" Value="{StaticResource headerStyleGradient}" />
+                                <Setter Property="BorderBrush" Value="{DynamicResource BlackBrush}" />
+                                <Setter  Property="Foreground" Value="Yellow" />
+                                <Setter Property="Margin" Value="1,1,1,1" />
+                                <Setter Property="Padding" Value="3,3,3,3" />
+                                <Setter Property="BorderThickness" Value="0,0,0,0" />
+
+                                <Setter Property="Cursor" Value="Hand" />
+                            </Style>
+
+                        </DataGridTextColumn.HeaderStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn ElementStyle="{DynamicResource MetroDataGridTextBox}"
+                                        EditingElementStyle="{DynamicResource MetroDataGridTextBox}" Width="Auto" Header="Nachname" Binding="{Binding Path=AnsprechpersonNachname,UpdateSourceTrigger=PropertyChanged}">
+                        <DataGridTextColumn.HeaderStyle>
+                            <Style TargetType="{x:Type DataGridColumnHeader}" 
+                                               BasedOn="{StaticResource {ComponentResourceKey TypeInTargetAssembly={x:Type filter:DataGridHeaderFilterControl}, ResourceId=DataGridHeaderFilterControlStyle}}">
+                                <Setter Property="FontSize" Value="14" />
+                                <Setter Property="FontFamily" Value="{DynamicResource DefaultFont}" />
+                                <Setter Property="FontWeight" Value="SemiBold" />
+                                <Setter Property="Background" Value="{StaticResource headerStyleGradient}" />
+                                <Setter Property="BorderBrush" Value="{DynamicResource BlackBrush}" />
+                                <Setter  Property="Foreground" Value="Yellow" />
+                                <Setter Property="Margin" Value="1,1,1,1" />
+                                <Setter Property="Padding" Value="3,3,3,3" />
+                                <Setter Property="BorderThickness" Value="0,0,0,0" />
+
+                                <Setter Property="Cursor" Value="Hand" />
+                            </Style>
+
+                        </DataGridTextColumn.HeaderStyle>
+                    </DataGridTextColumn>
+                    <DataGridComboBoxColumn Header="Bearbeitungsstatus"                                                  
                                 SelectedValueBinding="{Binding Path=In_Bearbeitung,UpdateSourceTrigger=PropertyChanged}"
                                 ItemsSource="{Binding Source={StaticResource valueStatusEnumList}}"
                                 SelectedValuePath="Value"
-                                DisplayMemberPath="Text"/>
-                <DataGridTextColumn Width="Auto" Header="User Vorname" Binding="{Binding Path=UserVorname,UpdateSourceTrigger=PropertyChanged}"/>
-                <DataGridTextColumn Width="Auto" Header="Nachname" Binding="{Binding Path=UserNachname,UpdateSourceTrigger=PropertyChanged}"/>
-                <DataGridComboBoxColumn Header="Angebot geschickt"                                                  
+                                DisplayMemberPath="Text">
+                        <DataGridComboBoxColumn.HeaderStyle>
+                            <Style TargetType="{x:Type DataGridColumnHeader}" 
+                                               BasedOn="{StaticResource {ComponentResourceKey TypeInTargetAssembly={x:Type filter:DataGridHeaderFilterControl}, ResourceId=DataGridHeaderFilterControlStyle}}">
+                                <Setter Property="FontSize" Value="14" />
+                                <Setter Property="FontFamily" Value="{DynamicResource DefaultFont}" />
+                                <Setter Property="FontWeight" Value="SemiBold" />
+                                <Setter Property="Background" Value="{StaticResource headerStyleGradient}" />
+                                <Setter Property="BorderBrush" Value="{DynamicResource BlackBrush}" />
+                                <Setter Property="Foreground" Value="Yellow"/>
+                                <Setter Property="Margin" Value="1,1,1,1" />
+                                <Setter Property="Padding" Value="3,3,3,3" />
+                                <Setter Property="BorderThickness" Value="0,0,0,0" />
+
+                                <Setter Property="Cursor" Value="Hand" />
+                            </Style>
+                        </DataGridComboBoxColumn.HeaderStyle>
+                    </DataGridComboBoxColumn>
+                    <DataGridTextColumn ElementStyle="{DynamicResource MetroDataGridTextBox}"
+                                        EditingElementStyle="{DynamicResource MetroDataGridTextBox}" Width="Auto" Header="User Vorname" Binding="{Binding Path=UserVorname,UpdateSourceTrigger=PropertyChanged}">
+                        <DataGridTextColumn.HeaderStyle>
+                            <Style TargetType="{x:Type DataGridColumnHeader}" 
+                                               BasedOn="{StaticResource {ComponentResourceKey TypeInTargetAssembly={x:Type filter:DataGridHeaderFilterControl}, ResourceId=DataGridHeaderFilterControlStyle}}">
+                                <Setter Property="FontSize" Value="14" />
+                                <Setter Property="FontFamily" Value="{DynamicResource DefaultFont}" />
+                                <Setter Property="FontWeight" Value="SemiBold" />
+                                <Setter Property="Background" Value="{StaticResource headerStyleGradient}" />
+                                <Setter Property="BorderBrush" Value="{DynamicResource BlackBrush}" />
+                                <Setter  Property="Foreground" Value="Yellow"/>
+                                <Setter Property="Margin" Value="1,1,1,1" />
+                                <Setter Property="Padding" Value="3,3,3,3" />
+                                <Setter Property="BorderThickness" Value="0,0,0,0" />
+
+                                <Setter Property="Cursor" Value="Hand" />
+                            </Style>
+
+                        </DataGridTextColumn.HeaderStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn ElementStyle="{DynamicResource MetroDataGridTextBox}"
+                                        EditingElementStyle="{DynamicResource MetroDataGridTextBox}" Width="Auto" Header="Nachname" Binding="{Binding Path=UserNachname,UpdateSourceTrigger=PropertyChanged}">
+                        <DataGridTextColumn.HeaderStyle>
+                            <Style TargetType="{x:Type DataGridColumnHeader}" 
+                                               BasedOn="{StaticResource {ComponentResourceKey TypeInTargetAssembly={x:Type filter:DataGridHeaderFilterControl}, ResourceId=DataGridHeaderFilterControlStyle}}">
+                                <Setter Property="FontSize" Value="14" />
+                                <Setter Property="FontFamily" Value="{DynamicResource DefaultFont}" />
+                                <Setter Property="FontWeight" Value="SemiBold" />
+                                <Setter Property="Background" Value="{StaticResource headerStyleGradient}" />
+                                <Setter Property="BorderBrush" Value="{DynamicResource BlackBrush}" />
+                                <Setter Property="Foreground" Value="Yellow" />
+                                <Setter Property="Margin" Value="1,1,1,1" />
+                                <Setter Property="Padding" Value="3,3,3,3" />
+                                <Setter Property="BorderThickness" Value="0,0,0,0" />
+
+                                <Setter Property="Cursor" Value="Hand" />
+                            </Style>
+
+                        </DataGridTextColumn.HeaderStyle>
+                    </DataGridTextColumn>
+                    <DataGridComboBoxColumn Header="Angebot geschickt"                                                  
                                 SelectedValueBinding="{Binding Path=Angebot_geschickt,UpdateSourceTrigger=PropertyChanged}"
                                 ItemsSource="{Binding Source={StaticResource valueStatusEnumList}}"
                                 SelectedValuePath="Value"
-                                DisplayMemberPath="Text"/>
+                                DisplayMemberPath="Text">
+                        <DataGridComboBoxColumn.HeaderStyle>
+                            <Style TargetType="{x:Type DataGridColumnHeader}" 
+                                               BasedOn="{StaticResource {ComponentResourceKey TypeInTargetAssembly={x:Type filter:DataGridHeaderFilterControl}, ResourceId=DataGridHeaderFilterControlStyle}}">
+                                <Setter Property="FontSize" Value="14" />
+                                <Setter Property="FontFamily" Value="{DynamicResource DefaultFont}" />
+                                <Setter Property="FontWeight" Value="SemiBold" />
+                                <Setter Property="Background" Value="{StaticResource headerStyleGradient}" />
+                                <Setter Property="BorderBrush" Value="{DynamicResource BlackBrush}" />
+                                <Setter Property="Foreground" Value="Yellow"/>
+                                <Setter Property="Margin" Value="1,1,1,1" />
+                                <Setter Property="Padding" Value="3,3,3,3" />
+                                <Setter Property="BorderThickness" Value="0,0,0,0" />
+
+                                <Setter Property="Cursor" Value="Hand" />
+                            </Style>
+
+                        </DataGridComboBoxColumn.HeaderStyle>
+                    </DataGridComboBoxColumn>
                     <DataGridComboBoxColumn Header="Kooperationsstatus"                                                  
                                 SelectedValueBinding="{Binding Path=Interesse_Kooperationsvertrag,UpdateSourceTrigger=PropertyChanged}"
                                 ItemsSource="{Binding Source={StaticResource valueStatusEnumList}}" 
                                 SelectedValuePath="Value"
                                 DisplayMemberPath="Text">
+                        <DataGridComboBoxColumn.HeaderStyle>
+                            <Style TargetType="{x:Type DataGridColumnHeader}" 
+                                               BasedOn="{StaticResource {ComponentResourceKey TypeInTargetAssembly={x:Type filter:DataGridHeaderFilterControl}, ResourceId=DataGridHeaderFilterControlStyle}}">
+                                <Setter Property="FontSize" Value="14" />
+                                <Setter Property="FontFamily" Value="{DynamicResource DefaultFont}" />
+                                <Setter Property="FontWeight" Value="SemiBold" />
+                                <Setter Property="Background" Value="{StaticResource headerStyleGradient}" />
+                                <Setter Property="BorderBrush" Value="{DynamicResource BlackBrush}" />
+                                <Setter Property="Foreground" Value="Yellow" />
+                                <Setter Property="Margin" Value="1,1,1,1" />
+                                <Setter Property="Padding" Value="3,3,3,3" />
+                                <Setter Property="BorderThickness" Value="0,0,0,0" />
 
+                                <Setter Property="Cursor" Value="Hand" />
+                            </Style>
+
+                        </DataGridComboBoxColumn.HeaderStyle>
                     </DataGridComboBoxColumn>
-                  <!-- this does not yet work with the filter-->
-                  <!--  <DataGridTemplateColumn Header="Kooperationsstatus" MinWidth="140">
+                    <!-- this does not yet work with the filter-->
+                    <!--  <DataGridTemplateColumn Header="Kooperationsstatus" MinWidth="140">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
                                 <TextBlock Text="{Binding Path=Interesse_Kooperationsvertrag,UpdateSourceTrigger=PropertyChanged}"/>
@@ -118,30 +405,83 @@
                         </DataGridTemplateColumn.CellEditingTemplate>
                     </DataGridTemplateColumn>-->
 
-                  
-                    <DataGridTextColumn Width="Auto" Header="Änderungsdatum" Binding="{Binding Path=Änderungsdatum,UpdateSourceTrigger=PropertyChanged}" />
+
+                    <DataGridTextColumn ElementStyle="{DynamicResource MetroDataGridTextBox}"
+                                        EditingElementStyle="{DynamicResource MetroDataGridTextBox}" Width="Auto" Header="Änderungsdatum" Binding="{Binding Path=Änderungsdatum,UpdateSourceTrigger=PropertyChanged}" >
+                        <DataGridTextColumn.HeaderStyle>
+                            <Style TargetType="{x:Type DataGridColumnHeader}" 
+                                               BasedOn="{StaticResource {ComponentResourceKey TypeInTargetAssembly={x:Type filter:DataGridHeaderFilterControl}, ResourceId=DataGridHeaderFilterControlStyle}}">
+                                <Setter Property="FontSize" Value="14" />
+                                <Setter Property="FontFamily" Value="{DynamicResource DefaultFont}" />
+                                <Setter Property="FontWeight" Value="SemiBold" />
+                                <Setter Property="Background" Value="{StaticResource headerStyleGradient}" />
+                                <Setter Property="BorderBrush" Value="{DynamicResource BlackBrush}" />
+                                <Setter  Property="Foreground" Value="Yellow" />
+                                <Setter Property="Margin" Value="1,1,1,1" />
+                                <Setter Property="Padding" Value="3,3,3,3" />
+                                <Setter Property="BorderThickness" Value="0,0,0,0" />
+
+                                <Setter Property="Cursor" Value="Hand" />
+                            </Style>
+
+                        </DataGridTextColumn.HeaderStyle>
+                    </DataGridTextColumn>
                     <DataGridComboBoxColumn Header="Abgeschlossen"                                                  
                                 SelectedValueBinding="{Binding Path=Abgeschlossen,UpdateSourceTrigger=PropertyChanged}"
                                 ItemsSource="{Binding Source={StaticResource valueStatusEnumList}}"
                                 SelectedValuePath="Value"
                                 DisplayMemberPath="Text">
-                       
-                </DataGridComboBoxColumn>
+                        <DataGridComboBoxColumn.HeaderStyle>
+                            <Style TargetType="{x:Type DataGridColumnHeader}" 
+                                               BasedOn="{StaticResource {ComponentResourceKey TypeInTargetAssembly={x:Type filter:DataGridHeaderFilterControl}, ResourceId=DataGridHeaderFilterControlStyle}}">
+                                <Setter Property="FontSize" Value="14" />
+                                <Setter Property="FontFamily" Value="{DynamicResource DefaultFont}" />
+                                <Setter Property="FontWeight" Value="SemiBold" />
+                                <Setter Property="Background" Value="{StaticResource headerStyleGradient}" />
+                                <Setter Property="BorderBrush" Value="{DynamicResource BlackBrush}" />
+                                <Setter  Property="Foreground" Value="Yellow" />
+                                <Setter Property="Margin" Value="1,1,1,1" />
+                                <Setter Property="Padding" Value="3,3,3,3" />
+                                <Setter Property="BorderThickness" Value="0,0,0,0" />
+
+                                <Setter Property="Cursor" Value="Hand" />
+                            </Style>
+
+                        </DataGridComboBoxColumn.HeaderStyle>
+                    </DataGridComboBoxColumn>
                     <!--<DataGridTextColumn Width="Auto" Header="Notizen" Binding="{Binding Path=Notizen,UpdateSourceTrigger=PropertyChanged}"/>-->
-                <DataGridTextColumn Width="Auto" Header="Angebotsnummer" Binding="{Binding Path=Angebotsnummer,UpdateSourceTrigger=PropertyChanged}"/>
-                <!--<DataGridTextColumn Width="Auto" Header="Abklärung" Binding="{Binding Path=Abklärung,UpdateSourceTrigger=PropertyChanged}"/>-->
+                    <DataGridTextColumn Width="Auto" Header="Angebotsnummer" Binding="{Binding Path=Angebotsnummer,UpdateSourceTrigger=PropertyChanged}">
+                        <DataGridTextColumn.HeaderStyle>
+                            <Style TargetType="{x:Type DataGridColumnHeader}" 
+                                               BasedOn="{StaticResource {ComponentResourceKey TypeInTargetAssembly={x:Type filter:DataGridHeaderFilterControl}, ResourceId=DataGridHeaderFilterControlStyle}}">
+                                <Setter Property="FontSize" Value="14" />
+                                <Setter Property="FontFamily" Value="{DynamicResource DefaultFont}" />
+                                <Setter Property="FontWeight" Value="SemiBold" />
+                                <Setter Property="Background" Value="{StaticResource headerStyleGradient}" />
+                                <Setter Property="BorderBrush" Value="{DynamicResource BlackBrush}" />
+                                <Setter Property="Foreground" Value="Yellow" />
+                                <Setter Property="Margin" Value="1,1,1,1" />
+                                <Setter Property="Padding" Value="3,3,3,3" />
+                                <Setter Property="BorderThickness" Value="0,0,0,0" />
+
+                                <Setter Property="Cursor" Value="Hand" />
+                            </Style>
+
+                        </DataGridTextColumn.HeaderStyle>
+                    </DataGridTextColumn>
+                    <!--<DataGridTextColumn Width="Auto" Header="Abklärung" Binding="{Binding Path=Abklärung,UpdateSourceTrigger=PropertyChanged}"/>-->
                 </DataGrid.Columns>
-            <DataGrid.RowHeaderTemplate>
-                <DataTemplate>
-                    <ToggleButton x:Name="RowHeaderToggleButton" IsEnabled="False" />
-                </DataTemplate>
-            </DataGrid.RowHeaderTemplate>
-            <DataGrid.RowDetailsTemplate>
-                <DataTemplate>
-                </DataTemplate>
-            </DataGrid.RowDetailsTemplate>
-        </DataGrid>
-    </Grid>
+                <DataGrid.RowHeaderTemplate>
+                    <DataTemplate>
+                        <ToggleButton x:Name="RowHeaderToggleButton" IsEnabled="False" />
+                    </DataTemplate>
+                </DataGrid.RowHeaderTemplate>
+                <DataGrid.RowDetailsTemplate>
+                    <DataTemplate>
+                    </DataTemplate>
+                </DataGrid.RowDetailsTemplate>
+            </DataGrid>
+        </Grid>
     </DockPanel>
 </UserControl>
 

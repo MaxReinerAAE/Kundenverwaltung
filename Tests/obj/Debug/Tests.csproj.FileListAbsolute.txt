@@ -50,3 +50,4 @@ C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung\Tests\obj\
 C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung\Tests\obj\Debug\Tests.csproj.CoreCompileInputs.cache
 C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung\Tests\obj\Debug\Tests.dll
 C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung\Tests\obj\Debug\Tests.pdb
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung Metro UI\Tests\bin\Debug\de\EntityFramework.resources.dll

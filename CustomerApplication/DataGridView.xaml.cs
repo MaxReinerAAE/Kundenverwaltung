@@ -17,6 +17,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using ViewModel;
+using MahApps.Metro.Controls.Dialogs;
 
 namespace CustomerApplication
 {
@@ -25,11 +26,12 @@ namespace CustomerApplication
     /// </summary>
     public partial class DataGridView : UserControl
     {
-      
+        DataGridViewModel vm = new DataGridViewModel(DialogCoordinator.Instance);
+
         public DataGridView()
         {
             InitializeComponent();
-           
+            DataContext = vm;
 
         }
 
@@ -65,9 +67,12 @@ namespace CustomerApplication
                 {
                     customersToDelete.Add(customerToDelete);
                 }
-                gridViewModel.DeleteCustomers(customersToDelete);
+                int customersDeleted = gridViewModel.DeleteCustomers(customersToDelete);
+                ShowMessageDialog("Kunden gelöscht", customersDeleted == 1 ? customersDeleted + " Datensatz wurde gelöscht": customersDeleted + " Datensätze wurden gelöscht", MessageDialogStyle.Affirmative);
             }
-            else MessageBox.Show("Es müssen ein oder mehr Kunden ausgewählt werden", "Kunden löschen - Fehler in Auswahl", MessageBoxButton.OK, MessageBoxImage.Error);
+            else ShowMessageDialog("Kunden löschen", "Es müssen zuvor ein oder mehr Kunden ausgewählt werden", MessageDialogStyle.Affirmative);
+
+           
         }
 
         private void btn_Click_Update_Customers(object sender, RoutedEventArgs e)
@@ -80,7 +85,8 @@ namespace CustomerApplication
                 
                 gridViewModel.UpdateAllCustomers();
                 CustomerGrid.DataContext = new DataGridViewModel();
-                MessageBox.Show("Datensätze wurden aktualisiert", "Kundenaktualisierung", MessageBoxButton.OK, MessageBoxImage.Information);
+                var customersUpdated = ((DataGridViewModel)CustomerGrid.DataContext).CustomersInfo.Count();
+                ShowMessageDialog("Kunden aktualisiert", customersUpdated == 1 ? customersUpdated + " Datensatz wurde aktualisiert" : customersUpdated + " Datensätze wurden aktualisiert", MessageDialogStyle.Affirmative);
             }
 
         }
@@ -95,10 +101,11 @@ namespace CustomerApplication
 
                 DataGridViewModel gridViewModel = (DataGridViewModel)this.DataContext;
                 rowViewModel.ParentGrid = gridViewModel;
+                rowViewModel.DetailWindowDatacontext = detailWindow.DataContext;
                 CustomerGrid.UnselectAllCells();
                 bool? result = detailWindow.ShowDialog();
             }
-            else MessageBox.Show("Ein Datensatz muss zuvor selektiert werden", "Kunde bearbeiten - Fehler in Auswahl", MessageBoxButton.OK, MessageBoxImage.Error);
+            else ShowMessageDialog("Kunde bearbeiten - Info", "Ein Datensatz muss zuvor selektiert werden", MessageDialogStyle.Affirmative);
         }
 
         private void btn_Click_Insert_New_Customer(object sender, RoutedEventArgs e)
@@ -110,11 +117,15 @@ namespace CustomerApplication
 
             DataGridViewModel gridViewModel = (DataGridViewModel)this.DataContext;
             rowViewModel.ParentGrid = gridViewModel;
-            
+            rowViewModel.DetailWindowDatacontext = detailWindow.DataContext;
             bool? result = detailWindow.ShowDialog();
           
         }
-
+        private async void ShowMessageDialog(string title, string message, MessageDialogStyle messageDialogStyle)
+        {
+            await DialogCoordinator.Instance.ShowMessageAsync(this.DataContext, title, message, messageDialogStyle);
+         
+        }
         private void CustomerGrid_DataContextChanged(object sender, DependencyPropertyChangedEventArgs e)
         {
             

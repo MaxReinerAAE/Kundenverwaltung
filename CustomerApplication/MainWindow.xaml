@@ -1,18 +1,15 @@
-﻿<Window x:Class="CustomerApplication.MainWindow"
+﻿<Controls:MetroWindow x:Class="CustomerApplication.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:this="clr-namespace:CustomerApplication" 
-        xmlns:local="clr-namespace:ViewModel;assembly=ViewModel"
-        xmlns:datamodel="clr-namespace:DataModel;assembly=DataModel"
-        Title="Kundenverwaltung AAE" >
+    
+        Title="Kundenverwaltung"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro">
 
     <Viewbox Stretch="Uniform" VerticalAlignment="Top">
         <Grid>
-   
-                    <this:DataGridView x:Name="CustomerGrid" />
-   
-
+          <this:DataGridView x:Name="CustomerGrid" />
         </Grid>
     </Viewbox>
     
-</Window>
+</Controls:MetroWindow>

@@ -1,5 +1,6 @@
 ﻿
 using DataModel;
+using MahApps.Metro.Controls.Dialogs;
 using System;
 
 using System.Collections.Generic;
@@ -21,35 +22,37 @@ namespace ViewModel
     {
 
         private Customer customerInfo;
-      
+        private IDialogCoordinator dialogCoordinator;
 
-        public CustomerViewModel()
+        public CustomerViewModel(IDialogCoordinator instance) 
         {
+            dialogCoordinator = instance;
             this.CustomerInfo = new Customer();
             SaveDataCommand = new RelayCommand(SaveData);
-            
+
         }
+       
 
         public static CustomerViewModel getSampleCustomerView()
         {
             Customer sample = Customer.getSampleCustomer();
             
-            return new CustomerViewModel() { CustomerInfo = sample };
+            return new CustomerViewModel(DialogCoordinator.Instance) { CustomerInfo = sample };
         }
         public static CustomerViewModel getCustomerView(Customer customer)
         {
-            return new CustomerViewModel() { CustomerInfo = customer };
+            return new CustomerViewModel(DialogCoordinator.Instance) { CustomerInfo = customer };
         }
 
         public static CustomerViewModel getCancelObject(Customer customer)
         {
-            CustomerViewModel cancelCustomerView = new CustomerViewModel() { CustomerInfo = customer };
+            CustomerViewModel cancelCustomerView = new CustomerViewModel(DialogCoordinator.Instance) { CustomerInfo = customer };
             return cancelCustomerView;
         }
 
         public static CustomerViewModel getNewCustomerView()
         {
-            CustomerViewModel newCustomerView = new CustomerViewModel() { CustomerInfo = new Customer() };
+            CustomerViewModel newCustomerView = new CustomerViewModel(DialogCoordinator.Instance) { CustomerInfo = new Customer() };
 
             using (var ctx = new ApplicationDbContext())
             {
@@ -259,6 +262,19 @@ namespace ViewModel
                 return result;
             }
         }
+        private async void ShowCustomerSavedDialog(object parameter)
+        {
+            await this.dialogCoordinator.ShowMessageAsync(this.DetailWindowDatacontext, "Kunde wurde gespeichert", "", MessageDialogStyle.Affirmative);
+            var editWindow = parameter as Window;
+            editWindow?.Close();
+        }
+
+        private async void ShowCustomerNotSavedDialog(string message)
+        {
+            await this.dialogCoordinator.ShowMessageAsync(this.DetailWindowDatacontext, "Kunde wurde nicht gespeichert", message, MessageDialogStyle.Affirmative);
+        }
+
+
         public void SaveData(object parameter)
         {
             // Extra validation code not necessary here, because of existing form validation
@@ -273,13 +289,13 @@ namespace ViewModel
                     int result = InsertOrUpdateCustomerFromView();
                     if (result > 0)
                     {
-                        MessageBox.Show("Kunde wurde gespeichert", "Speichern erfolgreich", MessageBoxButton.OK, MessageBoxImage.Information);
+
+                        ShowCustomerSavedDialog(parameter);
                         ParentGrid.AddOrUpdateCustomer(this);
-                        var editWindow = parameter as Window;
-                        editWindow?.Close();
+
 
                     }
-                    else MessageBox.Show("Kunde wurde nicht gespeichert", "Fehler", MessageBoxButton.OK, MessageBoxImage.Error);
+                    else ShowCustomerNotSavedDialog("Unbekannter Fehler");
                 }
                 catch (DbEntityValidationException e)
                 {
@@ -294,7 +310,7 @@ namespace ViewModel
                                 ve.PropertyName, ve.ErrorMessage);
                         }
                     }
-                    MessageBox.Show("Kunde wurde nicht gespeichert \n\nReason:" + errorMessage, "Fehler", MessageBoxButton.OK, MessageBoxImage.Error);
+                    ShowCustomerNotSavedDialog("\n\nGrund:" + errorMessage);
                 }
 
             }
@@ -303,7 +319,7 @@ namespace ViewModel
 
         public static int Errors { get; set; }
         public DataGridViewModel ParentGrid { get; set; }
-     
+        public object DetailWindowDatacontext { get; set; }
 
         public IDisposable Subscribe(IObserver<Customer> observer)
         {

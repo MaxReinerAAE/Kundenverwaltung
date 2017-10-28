@@ -83,3 +83,31 @@ C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung\DataGridFi
 C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung\DataGridFilterLibrary\obj\Debug\DataGridFilterLibrary.csproj.CoreCompileInputs.cache
 C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung\DataGridFilterLibrary\obj\Debug\DataGridFilterLibrary.dll
 C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung\DataGridFilterLibrary\obj\Debug\DataGridFilterLibrary.pdb
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung-master\DataGridFilterLibrary\bin\Debug\DataGridFilterLibrary.dll
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung-master\DataGridFilterLibrary\bin\Debug\DataGridFilterLibrary.pdb
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung-master\DataGridFilterLibrary\bin\Debug\ViewModel.dll
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung-master\DataGridFilterLibrary\bin\Debug\DataModel.dll
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung-master\DataGridFilterLibrary\bin\Debug\EntityFramework.dll
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung-master\DataGridFilterLibrary\bin\Debug\MySql.Data.Entity.EF6.dll
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung-master\DataGridFilterLibrary\bin\Debug\MySql.Data.dll
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung-master\DataGridFilterLibrary\bin\Debug\ViewModel.pdb
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung-master\DataGridFilterLibrary\bin\Debug\DataModel.pdb
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung-master\DataGridFilterLibrary\bin\Debug\DataModel.dll.config
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung-master\DataGridFilterLibrary\bin\Debug\EntityFramework.xml
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung-master\DataGridFilterLibrary\bin\Debug\MySql.Data.Entity.EF6.xml
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung-master\DataGridFilterLibrary\bin\Debug\MySql.Data.xml
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung-master\DataGridFilterLibrary\obj\Debug\DataGridFilterLibrary.csprojResolveAssemblyReference.cache
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung-master\DataGridFilterLibrary\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung-master\DataGridFilterLibrary\obj\Debug\DataGridFilterLibrary_MarkupCompile.cache
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung-master\DataGridFilterLibrary\obj\Debug\DataGridFilterLibrary_MarkupCompile.lref
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung-master\DataGridFilterLibrary\obj\Debug\Themes\Generic.baml
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung-master\DataGridFilterLibrary\obj\Debug\DataGridFilterLibrary.g.resources
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung-master\DataGridFilterLibrary\obj\Debug\DataGridFilterLibrary.Properties.Resources.resources
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung-master\DataGridFilterLibrary\obj\Debug\DataGridFilterLibrary.csproj.GenerateResource.Cache
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung-master\DataGridFilterLibrary\obj\Debug\DataGridFilterLibrary.csproj.CoreCompileInputs.cache
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung-master\DataGridFilterLibrary\obj\Debug\DataGridFilterLibrary.dll
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung-master\DataGridFilterLibrary\obj\Debug\DataGridFilterLibrary.pdb
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung Metro UI\DataGridFilterLibrary\bin\Debug\de\EntityFramework.resources.dll
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung Metro UI\DataGridFilterLibrary\bin\Debug\MahApps.Metro.dll
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung Metro UI\DataGridFilterLibrary\bin\Debug\MahApps.Metro.pdb
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung Metro UI\DataGridFilterLibrary\bin\Debug\MahApps.Metro.xml

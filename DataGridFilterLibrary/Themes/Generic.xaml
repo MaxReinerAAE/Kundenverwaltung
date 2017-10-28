@@ -4,12 +4,20 @@
 
     xmlns:theme="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero"
     xmlns:s="clr-namespace:System;assembly=mscorlib"
-    
+    xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
     xmlns:local="clr-namespace:DataGridFilterLibrary"
     xmlns:support="clr-namespace:DataGridFilterLibrary.Support">
-
+    <ResourceDictionary.MergedDictionaries>
+        <!-- MahApps.Metro resource dictionaries. Make sure that all file names are Case Sensitive! -->
+        <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Colors.xaml" />
+        <!-- Accent and AppTheme setting -->
+        <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/Green.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseDark.xaml" />
+    </ResourceDictionary.MergedDictionaries>
     <Style TargetType="{x:Type local:DataGridColumnFilter}">
-
+      
         <Style.Resources>
             <support:EnumDisplayer Type="{x:Type support:FilterOperator}" x:Key="filterOperators">
                 <support:EnumDisplayEntry EnumValue="Undefined" DisplayString=""/>
@@ -32,21 +40,6 @@
             <support:MyOppositeBooleanToVisibilityConverter x:Key="oppositeBooleanToVisibilityConverter" />
             <support:ClearFilterButtonVisibilityConverter x:Key="clearFilterButtonVisibilityConverter" />                       
 
-            <Style TargetType="{x:Type support:DelayTextBox}">
-                <Setter Property="Background" Value="AliceBlue" />
-            </Style>
-
-            <Style TargetType="{x:Type ComboBox}">
-                <Setter Property="Background" Value="AliceBlue" />
-            </Style>
-
-            <Style TargetType="{x:Type CheckBox}">
-                <Setter Property="Background" Value="AliceBlue" />
-            </Style>
-
-            <Style TargetType="{x:Type DatePicker}">
-                <Setter Property="Background" Value="AliceBlue" />
-            </Style>
 
         </Style.Resources>
         
@@ -413,12 +406,15 @@
                    TypeInTargetAssembly={x:Type local:DataGridHeaderFilterControl}, 
                    ResourceId=DataGridHeaderFilterControlStyle}"
            TargetType="{x:Type DataGridColumnHeader}">
-
+       
         <Style.Resources>
+            
             <ResourceDictionary>
-                <support:MyBooleanToVisibilityConverter x:Key="booleanToVisibilityConverter" />     
+                <support:MyBooleanToVisibilityConverter x:Key="booleanToVisibilityConverter" />
+               
             </ResourceDictionary>
 
+          
         </Style.Resources>
 
         <Setter Property="Template">
@@ -445,7 +441,7 @@
                                                 
                             AssignedDataGridColumnHeader ="{Binding 
                                     RelativeSource={RelativeSource AncestorType={x:Type DataGridColumnHeader}}, 
-                                    Path=.}"
+                                    Path=.}" 
                                                 
                             AssignedDataGridColumn ="{Binding 
                                     RelativeSource={RelativeSource AncestorType={x:Type DataGridColumnHeader}}, 

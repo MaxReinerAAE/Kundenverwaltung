@@ -16,17 +16,21 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using ViewModel;
+using MahApps.Metro.Controls;
+using MahApps.Metro.Controls.Dialogs;
 
 namespace CustomerApplication
 {
     /// <summary>
     /// Interaktionslogik für CustomerDetailWindow.xaml
     /// </summary>
-    public partial class CustomerDetailWindow : Window
+    public partial class CustomerDetailWindow : MetroWindow
     {
+        CustomerViewModel vm = new CustomerViewModel(DialogCoordinator.Instance);
         public CustomerDetailWindow()
         {
             InitializeComponent();
+            DataContext = vm;
         }
 
        

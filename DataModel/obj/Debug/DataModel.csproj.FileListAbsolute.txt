@@ -35,4 +35,13 @@ C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung\DataModel\
 C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung\DataModel\obj\Debug\DataModel.pdb
 C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung\DataModel\obj\Debug\DataModel.Migrations.InitialDatabase.resources
 C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung\DataModel\obj\Debug\DataModel.csproj.GenerateResource.Cache
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung-master\Bin\Debug\DataModel.dll.config
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung-master\Bin\Debug\DataModel.dll
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung-master\Bin\Debug\DataModel.pdb
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung-master\DataModel\obj\Debug\DataModel.csprojResolveAssemblyReference.cache
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung-master\DataModel\obj\Debug\DataModel.Migrations.InitialDatabase.resources
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung-master\DataModel\obj\Debug\DataModel.csproj.GenerateResource.Cache
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung-master\DataModel\obj\Debug\DataModel.csproj.CoreCompileInputs.cache
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung-master\DataModel\obj\Debug\DataModel.dll
+C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung-master\DataModel\obj\Debug\DataModel.pdb
 C:\Users\maxre\Documents\Visual Studio 2017\Projects\Kundenverwaltung Metro UI\DataModel\obj\Debug\DataModel.csprojResolveAssemblyReference.cache

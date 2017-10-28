@@ -11,20 +11,22 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
+using MahApps.Metro.Controls.Dialogs;
 
 namespace ViewModel
 {
     public class DataGridViewModel : ViewModelBase
     {
         ObservableCollection<CustomerViewModel> customersInfo = new ObservableCollection<CustomerViewModel>();
-    
-        
-        public static bool DatabaseIsInitialized = false;
-        public DataGridViewModel(CustomerViewModel customerViewModel)
-        {
+        private IDialogCoordinator dialogCoordinator;
 
-            customersInfo.Add(customerViewModel);
+        public static bool DatabaseIsInitialized = false;
+
+        public DataGridViewModel(IDialogCoordinator instance) :this()
+        {
+            dialogCoordinator = instance;
         }
+
         public RelayCommand SaveCommand { get; set; }
 
         public RelayCommand ClearCommand { get; set; }
@@ -68,14 +70,15 @@ namespace ViewModel
             }
         }
 
-        public void DeleteCustomers(ObservableCollection<CustomerViewModel> customerInfosToDelete)
+        public int DeleteCustomers(ObservableCollection<CustomerViewModel> customerInfosToDelete)
         {
+            int customersDeleted = 0;
             List<Customer> customersToDelete = new List<Customer>();
             foreach (CustomerViewModel customerViewModel in customerInfosToDelete)
             {
                 Customer customer = customerViewModel.CustomerInfo;
                 CustomerViewModel modelToRemove = CustomersInfo.Where(i => i.ID == customerViewModel.ID).FirstOrDefault();
-                if (modelToRemove != null) CustomersInfo.Remove(modelToRemove); else return;
+                if (modelToRemove != null) CustomersInfo.Remove(modelToRemove); else return customersDeleted;
                 customersToDelete.Add(customer);
             }
             using (var ctx = new ApplicationDbContext())
@@ -87,13 +90,14 @@ namespace ViewModel
                     {
                         customer.User = null;
                         ctx.Customers.Remove(customer);
+                        customersDeleted++;
                         ctx.SaveChanges();
                     }
                     
                 }
             }
 
-           
+            return customersDeleted;
         }
 
         public void UpdateAllCustomers()

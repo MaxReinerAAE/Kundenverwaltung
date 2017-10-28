@@ -70,25 +70,25 @@ namespace DataModel
             Customer customer = new Customer()
             {
                 Id = 1,
-                Kundenbezeichnung = "Gemeinde Feistritz",
-                Ort = "Feistritz im Rosentahl",
+                Kundenbezeichnung = "Beispielkunde",
+                Ort = "Beispielort",
                 Bundesland = "",
                 Adresse = "",
                 Telefonnummer1 = "+43 666 113377",
                 Telefonnummer2 = "",
-                Email = "",
+                Email = "a.b@c.com",
                 Contactperson_Title = "Herr",
-                Contactperson_Firstname = "",
+                Contactperson_Firstname = "Josef",
                 Contactperson_Lastname = "Maier",
 
                 In_bearbeitung = Status.In_Arbeit,
-                User = new User() { Id = 1, Firstname = "R.", Lastname = "Klauss" },
+                User = new User() { Id = 1, Firstname = "Markus", Lastname = "Müller" },
                 Änderungsdatum = new DateTime(2017, 10, 19),
                 Unterlagen_gesendet = Status.Erledigt,
                 Angebot_geschickt = Status.Erledigt,
                 Interesse_kooperationsvertrag = Status.Erledigt,
                 Abgeschlossen = Status.In_Arbeit,
-                Notizen = "Am 25.7 Anrufen wegen Termin für Besichtigung.",
+                Notizen = "Anrufen wegen Termin für Besichtigung.",
                 Angebotsnummer = 1122,
                 Abklärung = ""
             };
