@@ -9,7 +9,7 @@ namespace DataGridFilterLibrary.Querying
 {
     public class QueryControllerFactory
     {
-        public static QueryController 
+        public static QueryController
             GetQueryController(
             System.Windows.Controls.DataGrid dataGrid,
             FilterData filterData, IEnumerable itemsSource)
@@ -27,6 +27,7 @@ namespace DataGridFilterLibrary.Querying
                 //clear the filter if exisits end
 
                 query = new QueryController();
+                DataGridExtensions.SetDataGrid(dataGrid);
                 DataGridExtensions.SetDataGridFilterQueryController(dataGrid, query);
             }
 

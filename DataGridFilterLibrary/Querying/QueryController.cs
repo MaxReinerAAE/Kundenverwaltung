@@ -11,7 +11,7 @@ using System.Threading;
 using System.Diagnostics;
 using System.Windows.Threading;
 using System.Collections.ObjectModel;
-using ViewModel;
+using System.Windows.Controls;
 
 namespace DataGridFilterLibrary.Querying
 {
@@ -131,9 +131,9 @@ namespace DataGridFilterLibrary.Querying
             {
                 IEnumerable collection = ItemsSource as IEnumerable;
 
-                if (ItemsSource is ObservableCollection<CustomerViewModel>)
+                if (ItemsSource is ObservableCollection<object>)
                 {
-                    collection = (ItemsSource as ObservableCollection<CustomerViewModel>);
+                    collection = (ItemsSource as ObservableCollection<object>);
                 }
 
                 var observable = ItemsSource as System.Collections.Specialized.INotifyCollectionChanged;
@@ -195,7 +195,9 @@ namespace DataGridFilterLibrary.Querying
                     new Action(() =>
                     {
                         filteredCollectionHashSet = initLookupDictionary(filteredCollection);
- 
+                        DataGrid dataGrid = DataGridExtensions.GetDataGrid();
+                        dataGrid.CommitEdit();
+                        dataGrid.CancelEdit();
                         view.Filter = new Predicate<object>(itemPassesFilter);
 
                         OnFilteringFinished(this, EventArgs.Empty);
