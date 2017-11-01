@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Windows;
+using System.Windows.Controls;
 using DataGridFilterLibrary.Querying;
 
 namespace DataGridFilterLibrary
@@ -26,6 +27,12 @@ namespace DataGridFilterLibrary
         public static DependencyProperty ClearFilterCommandProperty =
             DependencyProperty.RegisterAttached("ClearFilterCommand",
                 typeof(DataGridFilterCommand), typeof(DataGridExtensions));
+
+        static DataGrid dataGrid;
+        public static void SetDataGrid(DataGrid dataGrid)
+        {
+            DataGridExtensions.dataGrid = dataGrid;
+        }
 
         public static DataGridFilterCommand GetClearFilterCommand(DependencyObject target)
         {
@@ -86,6 +93,11 @@ namespace DataGridFilterLibrary
             DependencyObject target, bool value)
         {
             target.SetValue(IsClearButtonVisibleProperty, value);
+        }
+
+        public static DataGrid GetDataGrid()
+        {
+            return dataGrid;
         }
     }
 }
